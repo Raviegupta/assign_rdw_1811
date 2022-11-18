@@ -1,0 +1,194 @@
+/* --------general classes starts here ---------------------------------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+}
+.container{
+    max-width: 1440px;
+    margin:0 auto; 
+}
+.min_container{
+    min-width: 180px;
+    margin:0 auto; 
+}
+body{
+    background-color:#c3d7de;
+}
+
+/* ---------CSS of top section which contains header and banner starts here------------------------------ */
+.banner_image img{
+    width: 100%;  
+}
+header{
+    display:flex;
+    justify-content: space-around;
+    background-color: #3f6e92; 
+}
+.logo{
+    font-size: 2.5rem;
+    color: #fff;
+}
+.nav ul{
+    padding-top: 2rem;
+}
+.nav ul li{
+    list-style: none;
+    display: inline;
+    font-size: 2em;
+    color:#fff;
+    padding-right: 1em;
+}
+
+/* ---------CSS of section which contains logos of courses starts here--------------------------------------- */
+.icons{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.common_css_for_icons{
+    font-size: 8em;
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+}
+.icons .html{
+    background-color:rgb(255, 139, 139);  
+}
+.icons .css{
+    background-color:rgb(91, 230, 181);   
+}
+.icons .seo{
+    background-color:rgb(163, 220, 228);   
+}
+.icons .social{
+    background-color:rgb(165, 166, 190);
+}
+#icons_course_name{
+    font-size:2rem;
+    color: rgb(99, 100, 119);
+    font-weight: bolder;
+}
+
+/* -------CSS of section which contains tablet, phone & computer & its discription starts here---------------- */
+.tablet, .mobile, .computer{
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+}
+.tablet .tab, .mobile .mob, .computer .pc {
+    width: 50%;
+    display: flex;    
+}
+.tablet .tab img, .mobile .mob img, .computer .pc img {
+    width: 100%;
+}
+.tablet .tab-text, .mobile .mob-text, .computer .pc-text { 
+    padding-top: 2rem;
+    width:50%;
+    height: 75%;
+    /* border: 3px solid green; */
+    background-color:rgb(165, 166, 190);
+}
+.mobile .mob-text{
+    background-color:rgb(228, 201, 151);
+}
+.computer .pc-text{
+    background-color:rgb(255, 139, 139);
+}
+.tablet .tab-text h1, .mobile .mob-text h1, .computer .pc-text h1{
+    text-align: center;
+    font-size: 2.5em;
+    color: rgb(99, 100, 119);
+    /* border: 3px solid black; */
+}
+.tablet .tab-text p, .mobile .mob-text p, .computer .pc-text p{
+    color: #000;
+    font-size: 1.5em;
+    padding-left:2px;
+    padding-right: 2px;
+    margin: 0.5em;
+    text-align: justify;
+}
+
+/* -------CSS of section which contains google search, marketing & happy customer starts here------------------ */
+.text-box {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    padding-bottom: 6em;
+    /* border:5px solid black; */
+}
+.text-box .google-search, .text-box .marketing, .text-box .customer{
+    background-color: rgb(167, 119, 245);
+    /* padding-bottom: 40px ; */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    /* border:4px solid yellow; */
+}
+.text-box .marketing{
+    background-color: burlywood;
+}
+.text-box .customer{
+    background-color:rgb(163, 220, 228) ;
+}
+.google-search h1, .marketing h1, .text-box h1{
+    text-align: center;
+}
+.google-search p, .marketing p, .text-box p  {
+    text-align: justify;
+    font-size: 1.5em;
+}
+
+/* -------CSS of section which contains footer icons starts here------------------ */
+.foot-icon{
+    display: flex;
+    justify-content: space-around;
+    background-color: #3f87a1;
+    font-size: 5em;
+    color: #fff;
+    width: 100%;
+    /* height: 100%; */
+    padding: 5%;
+}
+footer p{
+    text-align: center;
+    background-color: rgb(70, 0, 70);
+    color: #fff;
+    font-size: 1.25em;
+    width: 100%;
+    height: 10%;
+}
+
+/* ******************** media queries starts here ******************************* */
+@media only screen and (max-width:800px) {
+    .nav {
+       display: none;
+    } 
+    header{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 7em;
+    }
+    .icons, .tablet, .mobile, .computer, .text-box{
+        display: flex;
+        flex-direction: column;
+    }
+    .tablet .tab, .tablet .tab-text, .mobile .mob-text, .mobile .mob, .computer .pc-text, .computer .pc, .google-search, .marketing, .customer{
+        width: 100%;
+    }
+    .foot-icon {
+        display: flex;
+        font-size: 1.5em;       
+    }  
+    @media only screen and (max-width:480px) {
+        header {
+            padding-left: 2em;           
+         }
+        header .logo h1{
+           font-size: 0.75em;
+        }
+    }   
+}
